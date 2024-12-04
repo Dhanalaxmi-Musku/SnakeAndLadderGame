@@ -24,5 +24,26 @@ public class SinglePlayerGame {
             default: return 0;
         }
     }
+    public void play() {
+        while (playerPosition < WINNING_POSITION) {
+            int dieRoll = rollDie();
+            int gameOption = determineGameOption();
+            System.out.println("Dice Roll: " + dieRoll + ", Option: " + 
+                (gameOption == 0 ? "No Play" : (gameOption == 1 ? "Ladder" : "Snake")));
+
+            switch (gameOption) {
+                case 0: // No Play
+                    break;
+                case 1: // Ladder
+                    playerPosition += dieRoll;
+                    break;
+                case 2: // Snake
+                    playerPosition -= dieRoll;
+                    break;
+            }
+            playerPosition = Math.max(START_POSITION, playerPosition);
+            System.out.println("Current Position: " + playerPosition);
+        }
+    }
 
 }

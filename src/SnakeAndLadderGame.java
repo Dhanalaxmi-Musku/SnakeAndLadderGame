@@ -3,5 +3,6 @@ public class SnakeAndLadderGame {
 		System.out.println("Welcome to Snake and Ladder Game Simulation");
 		SinglePlayerGame s=new SinglePlayerGame();
 		//System.out.println(s.determineGameOption());
+		s.play();
 	}
 }
