@@ -42,6 +42,9 @@ public class SinglePlayerGame {
                     break;
             }
             playerPosition = Math.max(START_POSITION, playerPosition);
+            if (playerPosition > WINNING_POSITION) {
+                playerPosition -= dieRoll;
+            }
             System.out.println("Current Position: " + playerPosition);
         }
     }
