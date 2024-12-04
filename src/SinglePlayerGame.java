@@ -11,5 +11,9 @@ public class SinglePlayerGame {
         this.diceRollCount = 0;
         this.random = new Random();
     }
+    public int rollDie() {
+        diceRollCount++;
+        return random.nextInt(6) + 1;
+    }
 
 }
