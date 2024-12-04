@@ -15,5 +15,14 @@ public class SinglePlayerGame {
         diceRollCount++;
         return random.nextInt(6) + 1;
     }
+    public int determineGameOption() {
+        int option = random.nextInt(3);
+        switch (option) {
+            case 0: return 0;  // No Play
+            case 1: return 1;  // Ladder
+            case 2: return 2;  // Snake
+            default: return 0;
+        }
+    }
 
 }
