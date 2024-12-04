@@ -47,6 +47,8 @@ public class SinglePlayerGame {
             }
             System.out.println("Current Position: " + playerPosition);
         }
+        System.out.println("Game Completed!");
+        System.out.println("Total Dice Rolls: " + diceRollCount);
     }
 
 }
